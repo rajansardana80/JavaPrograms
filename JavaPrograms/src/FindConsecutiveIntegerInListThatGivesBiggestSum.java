@@ -11,7 +11,7 @@ public class FindConsecutiveIntegerInListThatGivesBiggestSum {
 	  
 	    static int maxSubArraySum(int a[]) 
 	    { 
-	      /*  int size = a.length; 
+	       /* int size = a.length; 
 	        int max_so_far = Integer.MIN_VALUE, max_ending_here = 0; 
 	  
 	        for (int i = 0; i < size; i++) 
@@ -33,16 +33,14 @@ public class FindConsecutiveIntegerInListThatGivesBiggestSum {
 		        { 
 	    		 
 	    		 sum =sum+a[i];
-	    		if(previous_sum>sum)
-	    		{
-	    		 continue;
-		        }
-	    		else
+	    		if(previous_sum<sum)
 	    		{
 	    			previous_sum=sum;
-	    		}
+		        }
+	    		   if (sum < 0) 
+	    			   sum = 0; 
 	    
 	    } 
-	    	 return sum;
+	    	 return previous_sum;
 	    }
 }
